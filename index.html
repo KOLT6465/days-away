@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Days Away</title>
+  <meta name="description" content="A tiny macOS menu bar countdown for dates that matter.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f7f8;
+      --fg: #17191c;
+      --muted: #5d6670;
+      --panel: #ffffff;
+      --accent: #0a84ff;
+      --border: rgba(0,0,0,.10);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111214;
+        --fg: #f5f7fa;
+        --muted: #aab2bc;
+        --panel: #1c1d20;
+        --border: rgba(255,255,255,.12);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 16px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+    }
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 72px 24px;
+    }
+    nav {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 64px;
+    }
+    a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    a:hover { text-decoration: underline; }
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(44px, 8vw, 76px);
+      letter-spacing: 0;
+      line-height: .94;
+    }
+    .lead {
+      max-width: 620px;
+      margin: 0 0 34px;
+      color: var(--muted);
+      font-size: 22px;
+    }
+    .panel {
+      border: 1px solid var(--border);
+      background: var(--panel);
+      border-radius: 14px;
+      padding: 24px;
+      margin: 28px 0;
+    }
+    .tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    ul { margin: 0; padding-left: 20px; }
+    li + li { margin-top: 8px; }
+    footer {
+      color: var(--muted);
+      margin-top: 48px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a href="./support.html">Support</a>
+      <a href="./privacy.html">Privacy</a>
+    </nav>
+
+    <p class="tagline">📅 macOS menu bar utility</p>
+    <h1>Days Away</h1>
+    <p class="lead">A tiny countdown for the dates that matter. Add an event, choose a date, and keep the days away visible from your Mac menu bar.</p>
+
+    <section class="panel">
+      <h2>What it does</h2>
+      <ul>
+        <li>Shows upcoming events in a compact native macOS popover.</li>
+        <li>Makes the number of days the visual focus.</li>
+        <li>Stores events locally on your Mac.</li>
+        <li>Uses optional local notifications for important countdown moments.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>What it does not do</h2>
+      <ul>
+        <li>No accounts.</li>
+        <li>No cloud service.</li>
+        <li>No analytics.</li>
+        <li>No external API calls.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2026 Days Away. Always know what you’re counting down to.</p>
+    </footer>
+  </main>
+</body>
+</html>
